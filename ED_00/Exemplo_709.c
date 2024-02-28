@@ -1,0 +1,59 @@
+// ------------------------------------ EXEMPLO709
+// bibliotecas de funcoes auxiliares
+#include <stdio.h> // para entradas e saídas
+#include <stdlib.h> // para outras funcoes de uso geral
+typedef int MATRIZ[2][2];
+int main ( void )
+{
+// PROGRAMA PARA MONTAR A TRANSPOSTA DE UMA MATRIZ
+// VARIAVEIS :
+ MATRIZ M, // MATRIZ ORIGINAL
+ MT; // MATRIZ TRANSPOSTA
+ int X = 0, Y = 0;
+ printf ( "EXEMPLO709 - TRANSPOR UMA MATRIZ INTEIRA 2x2\n" );
+// REPETIR PARA CADA LINHA
+ for ( X = 0; X < 2; X++ )
+ { // REPETIR PARA CADA COLUNA
+ for ( Y = 0; Y < 2; Y++ )
+ {
+ printf ( "\nFORNECER ELEMENTO %d, %d : ",(X+1), (Y+1) );
+ scanf ( "%d", &M[ X ][ Y ] );
+ getchar( ); // limpar a entrada de dados
+ MT[ Y ][ X ] = M[ X ][ Y ];
+ } // FIM REPETIR
+ } // FIM REPETIR
+ printf ( "\n" );
+// REPETIR PARA CADA LINHA
+ for ( X = 0; X < 2; X++ )
+ { // REPETIR PARA CADA COLUNA
+ for ( Y = 0; Y < 2; Y++ )
+ printf ( "%d ", M[ X ][ Y ] );
+ printf ( "\n" );
+ } // FIM REPETIR
+ printf ( "\n\nPRESSIONAR <Enter> PARA TERMINAR" );
+ getchar ( ); // para esperar
+ return ( EXIT_SUCCESS );
+} // fim do programa
+
+/*
+
+saidas 
+
+EXEMPLO709 - TRANSPOR UMA MATRIZ INTEIRA 2x2
+
+FORNECER ELEMENTO 1, 1 : 3
+
+FORNECER ELEMENTO 1, 2 : 4
+
+FORNECER ELEMENTO 2, 1 : 5
+
+FORNECER ELEMENTO 2, 2 : 6
+
+3 4 
+5 6 
+
+
+PRESSIONAR <Enter> PARA TERMINAR
+
+
+*/
