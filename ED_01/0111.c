@@ -1,6 +1,6 @@
 /*
 Autor: Mateus Evangelista do Nascimento
-ED_01 - Exemplo0111
+ED_01 - 0111
 */
 
 /*
@@ -23,7 +23,7 @@ int main(void)
 
     // variaveis
     int x = 0;
-    int y = 0;
+    int y = 0; 
 
     // identificação
     printf("\n\n Le um valor inteiro do teclado, supoe que representa um lado de um quadrado e calcula uma area de outro quadrado com 3x o lado do valor lido\n");
@@ -34,7 +34,7 @@ int main(void)
     getchar();                               // consertar entrada
 
     // procedimento
-    y = Area_quadrado_3x(x); // consultar na biblioteca My_AED1.h
+    y = square_area_3x(x); // consultar na biblioteca My_AED1.h
 
     // saida
     printf("\nA area do novo quadrado e: %d metros quadrados", y);
