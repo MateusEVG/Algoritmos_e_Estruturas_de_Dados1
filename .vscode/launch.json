@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Mateus/Documents/ProjetosGitHub/Algoritmos_e_Estruturas_de_Dados1/ED_01",
-      "program": "c:/Users/Mateus/Documents/ProjetosGitHub/Algoritmos_e_Estruturas_de_Dados1/ED_01/build/Debug/outDebug",
+      "cwd": "c:/Users/Mateus/Documents/ProjetosGitHub/Algoritmos_e_Estruturas_de_Dados1/ED_02",
+      "program": "c:/Users/Mateus/Documents/ProjetosGitHub/Algoritmos_e_Estruturas_de_Dados1/ED_02/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
