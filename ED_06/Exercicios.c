@@ -1,99 +1,122 @@
-/*
- Exemplo0500 - v0.0. - 06/04/2024
- Author: Mateus Evangelista do Nascimento
-*/
-// dependencias
-#include "io.h"      // para definicoes proprias
-#include "My_AED1.h" // biblioteca para funcoes usadas nos metodos
+#include "io.h"
+#include "My_AED1.h"
 
+void method_01a(int x)
+{
+
+    if (x > 0)
+    {
+        method_01a(x - 1);
+        printf("%d\n", 6 * x);
+    }
+}
 void method_01()
 {
     int x = 0;
 
-    printf("\nDigite um numero e veja todos os multiplos de 6 ate essa quantidade: ");
+    printf("\nDigite um valor inteiro:\n");
     scanf("%d", &x);
-    getchar();
-
-    show6Multiples(x);
+    method_01a(x);
+    printf("\n");
 }
 
+// -----------------------------
+
+void method_02a(int x)
+{
+
+    if (x > 0)
+    {
+        printf("%d\n", 6 * x);
+        method_02a(x - 1);
+    }
+}
 void method_02()
 {
     int x = 0;
 
-    printf("\nDigite um numero e veja todos os multiplos de 3 e 5 ate essa quantidade: ");
+    printf("\nDigite um valor inteiro:\n");
     scanf("%d", &x);
-    getchar();
-
-    show3and5Multiples(x);
+    method_02a(x);
+    printf("\n");
 }
 
+// ---------------------------
+
+void method_03a(int x)
+{
+    if (x > 0)
+    {
+        method_03a(x - 1);
+        printf("1/%d : %lf\n", 6 * x, 1.0 / (6 * x));
+    }
+    else
+    {
+        printf("1/1 : %d\n", 1);
+    }
+}
 void method_03()
 {
     int x = 0;
 
-    printf("\nDigite um numero e veja todos as potencias de 4 ate essa quantidade: ");
+    printf("\nDigite um valor inteiro:\n");
     scanf("%d", &x);
-    getchar();
-
-    show4powers(x);
+    method_03a(x);
+    printf("\n");
 }
 
+// ---------------------------
+
+void method_04a(int x)
+{
+    if (x > 0)
+    {
+        printf("1/%d : %lf\n", 6 * x, 1.0 / (6 * x));
+        method_04a(x - 1);
+    }
+    else
+    {
+        printf("1/1 : %d\n", 1);
+    }
+}
 void method_04()
 {
     int x = 0;
 
-    printf("\nDigite um numero e veja todos os multiplos de 7 no denominador ate essa quantidade: ");
+    printf("\nDigite um valor inteiro:\n");
     scanf("%d", &x);
-    getchar();
-
-    show7denominador(x);
+    method_04a(x);
+    printf("\n");
 }
 
+// --------------------------
+int method_05a(int x)
+{
+    int sum = 0;
+    int y = 1;
+    if (x >= 0)
+    {
+        method_05a(x - 1);
+        y = y + 1;
+        sum = sum + 2 * x * y + 6;
+
+        printf("%d\n", sum);
+    }
+
+    return sum;
+}
 void method_05()
 {
     int x = 0;
-    double y = 0;
 
-    printf("\nDigite um numero e veja  as potencias pares de x ate essa quantidade: ");
+    printf("\nDigite um valor inteiro:\n");
     scanf("%d", &x);
-    getchar();
+    x = method_05a(x);
+    printf("\n");
 
-    printf("\nDigite um valor real: ");
-    scanf("%lf", &y);
-    getchar();
-
-    showPairPowers(x, y);
+    printf("\n%d\n", x);
 }
 
-void method_06()
-{
-    int x = 0;
-    printf("\nDigite um numero: ");
-    scanf("%d", &x);
-
-    printf("\n%d\n", sum5(x));
-}
-
-int sum5(int x)
-{
-    int soma = 0;
-
-    for (int y = 1; y <= x; y = y + 1)
-    {
-        if ((y * 3) % 5 != 0)
-        {
-            soma = 3 * y + soma;
-        }
-    }
-
-    return soma;
-}
-
-/*
- Funcao principal.
- @return codigo de encerramento
-*/
 int main()
 {
     // definir dado
@@ -136,11 +159,6 @@ int main()
         case 5:
             method_05();
             break;
-        case 6:
-            method_06();
-            break;
-        default:
-
         } // end switch
     } while (x != 0);
     // encerrar
